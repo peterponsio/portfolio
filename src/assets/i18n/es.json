@@ -5,6 +5,8 @@
         "ABOUT":"Quien soy?",
         "SKILLS":"Habilidades",
         "WORK":"Experiencia",
-        "CONTACT":"Contacto"
+        "CONTACT":"Contacto",
+        "DARKMODE":"Modo Oscuro",
+        "LIGTHMODE":"Modod Claro"
     }
 }

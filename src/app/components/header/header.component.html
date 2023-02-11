@@ -1,8 +1,8 @@
 <div class=" flex w-full p-4 justify-between items-center">
-    <div class=" h-10 w-10 rounded-full flex justify-center items-center shadow-md shadow-rose-500/50  bg-gradient-to-r from-rose-700 via-pink-700 to-red-500 cursor-pointer">
+    <div class=" h-8 w-8 rounded-full flex justify-center items-center shadow-sm shadow-rose-600/50  bg-gradient-to-r from-rose-700 via-pink-700 to-red-500 cursor-pointer">
         <p class=" font-bold font-mono text-white">{{'HEADER.LOGO_TEXT' | translate}}</p>
     </div>
-  <nav >
+  <nav class="hide-nav">
     <ul class=" flex items-center gap-5 font-mono font-normal text-white">
         <li>
             <mat-icon>home</mat-icon>
@@ -29,4 +29,41 @@
         </li>
     </ul>
   </nav>
+
+    <div class="show-menu text-white">
+        <button class="text-rose-600 h-10" mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon class=" h-full">view_headline</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" yPosition="below" class="text-white bg-gradient-to-r from-rose-700 via-pink-700 to-red-500">
+            <button mat-menu-item class=" hover:bg-gray-400/50 hover:animate-pulse">
+                <mat-icon>home</mat-icon>
+                {{'HEADER.HOME' | translate}}
+            </button>
+
+            <button mat-menu-item class=" hover:bg-gray-400/50 hover:animate-pulse">
+                <mat-icon>contact_support</mat-icon>
+                {{'HEADER.ABOUT' | translate}}
+            </button>
+
+            <button mat-menu-item class=" hover:bg-gray-400/50 hover:animate-pulse">
+                <mat-icon>code_icon</mat-icon>
+                {{'HEADER.SKILLS' | translate}}
+            </button>
+
+            <button mat-menu-item class=" hover:bg-gray-400/50 hover:animate-pulse">
+                <mat-icon>work</mat-icon>
+                {{'HEADER.WORK' | translate}}
+            </button>
+
+            <button mat-menu-item class=" hover:bg-gray-400/50 hover:animate-pulse">
+                <mat-icon>chat_bubble</mat-icon>
+                {{'HEADER.CONTACT' | translate}}
+            </button>
+
+            <button mat-menu-item class="hover:bg-gray-400/50 hover:animate-pulse">
+                <mat-icon>brightness_3</mat-icon>
+                {{'HEADER.DARKMODE' | translate}}
+            </button>
+        </mat-menu>
+    </div>
 </div>
