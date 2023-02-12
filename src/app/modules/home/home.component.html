@@ -1,3 +1,5 @@
 <app-header></app-header>
-<router-outlet></router-outlet>
+<div id="container" #con class=" text-white absolute max-h-[920px] overflow-y-auto" (scroll)="moveCamera()">
+    <router-outlet></router-outlet>
+</div>
 <app-footer></app-footer>
